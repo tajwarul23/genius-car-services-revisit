@@ -1,0 +1,22 @@
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+/* for small screen */
+@media only screen and (max-width:576px)  {
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+/* for medium screen */
+@media only screen and (min-width:577px) and (max-width: 992px)  {
+    .services-container{
+        grid-template-columns: repeat(2,1fr);
+        /* width: 450px; */
+    }
+    
+}
