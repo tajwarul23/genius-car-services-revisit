@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
     const [service, setService] = useState([]);
@@ -23,6 +23,11 @@ const ServiceDetails = () => {
                     <h4 class="card-title text-center">{name}</h4>
                         <h5 className='cart-title text-center'>Price:{price}$</h5>
                     <p class="card-text">{description}</p>
+                    <div className='text-center'>
+                    <Link to="/checkout">
+                        <button className='btn btn-primary'>Proceed Checkout</button>
+                    </Link>
+                    </div>
 
                 </div>
             </div>

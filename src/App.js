@@ -7,10 +7,13 @@ import Footer from './Pages/Shared/Footer/Footer'
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import Login from './Pages/Login/Login/Login';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import Checkout from './Pages/CheckOut/CheckOut/Checkout';
 function App() {
   return (
     <div className='App'>
       <Header></Header>
+  
       <Routes>
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/home' element={<Home></Home>}></Route>
@@ -18,6 +21,13 @@ function App() {
       <Route path='/service/:serviceId' element={<ServiceDetails></ServiceDetails>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/signup' element={<SignUp></SignUp>}></Route>
+
+      <Route path='/checkout' element={
+        <RequireAuth>
+          <Checkout></Checkout>
+        </RequireAuth>
+      }></Route>
+      
       </Routes>
      
       <Footer></Footer>
